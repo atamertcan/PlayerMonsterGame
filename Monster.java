@@ -37,3 +37,23 @@ public class Monster implements ISaveable{
         
         return values;
     }
+
+    @Override
+    public void read(List<String> savedValues) {
+        
+        if (savedValues != null && savedValues.size() > 0) {
+            
+            name = savedValues.get(0);
+            hitPoints = Integer.parseInt(savedValues.get(1));
+            strength = Integer.parseInt(savedValues.get(2));
+            
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return "Monster{name='" + name + "', " + "hitPoints=" + 
+                hitPoints + ", " + "strength=" + strength + "}";
+    }
+    
+}
