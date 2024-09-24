@@ -25,3 +25,15 @@ public class Monster implements ISaveable{
     public int getStrength(){
         return strength;
     }
+
+    @Override
+    public List<String> write() {
+        
+        List<String> values = new ArrayList<String>();
+        
+        values.add(0, name);
+        values.add(1, String.valueOf(hitPoints));
+        values.add(2, String.valueOf(strength));
+        
+        return values;
+    }
