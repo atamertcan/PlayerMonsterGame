@@ -15,3 +15,19 @@ public class Player implements ISaveable{
         this.strength = strength;
         weapon = "Sword";
     }
+
+    public String getName(){
+        return name;
+    }
+    
+    public String getWeapon(){
+        return weapon;
+    }
+    
+    public int getHitPoints(){
+        return hitPoints;
+    }
+    
+    public int getStrength(){
+        return strength;
+    }
