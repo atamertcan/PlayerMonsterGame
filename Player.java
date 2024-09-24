@@ -43,6 +43,20 @@ public class Player implements ISaveable{
     public void setHitPoints(int hitPoints){
         this.hitPoints = hitPoints;
     }
+
+    @Override
+    public List<String> write(){
+        
+        List<String> values = new ArrayList<String>();
+        
+        values.add(0, name);
+        values.add(1, String.valueOf(hitPoints));
+        values.add(2, String.valueOf(strength));
+        values.add(3, weapon);
+        
+        return values;
+
+    }
     
     public void setStrength(int strength){
         this.strength = strength;
