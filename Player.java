@@ -31,3 +31,19 @@ public class Player implements ISaveable{
     public int getStrength(){
         return strength;
     }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public void setWeapon(String weapon){
+        this.weapon = weapon;
+    }
+    
+    public void setHitPoints(int hitPoints){
+        this.hitPoints = hitPoints;
+    }
+    
+    public void setStrength(int strength){
+        this.strength = strength;
+    }
