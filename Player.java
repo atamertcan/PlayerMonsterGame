@@ -61,3 +61,26 @@ public class Player implements ISaveable{
     public void setStrength(int strength){
         this.strength = strength;
     }
+
+    @Override
+    public void read(List<String> list){
+        
+        if(!(list == null || list.size() <= 0)){
+            
+            name = list.get(0);
+            hitPoints = Integer.parseInt(list.get(1));
+            strength = Integer.parseInt(list.get(2));
+            weapon = list.get(3);
+        }
+        
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "Player{" + "name='" + name + "', " + "hitPoints=" +
+                hitPoints + ", " + "strength=" + strength + ", " +
+                "weapon='" + weapon + "'}";
+    }
+    
+}
